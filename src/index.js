@@ -1,13 +1,19 @@
 import React from 'react';
-// ReactDOM works to render the react object into the browser. 
 import ReactDOM from 'react-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import List from './containers/List';
-import Card from './components/Card/Card';
 
 const App = () => {
-    return <Card />;
+  return (
+    <div className='container-fluid'>
+      <nav className='navbar sticky-top navbar-light bg-dark'>
+        <h1 className='navbar-brand text-light'>MovieList</h1>
+      </nav>
+
+      <List />
+    </div>
+  );
 };
 
-// This line mounts the App component to an element with the root ID
-// in your document, which is the entry point of the application.
 ReactDOM.render(<App />, document.getElementById('root'));
